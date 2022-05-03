@@ -30,17 +30,8 @@ def encrypt_text(key, og_string):
     entry3.delete('1.0', 'end')
     entry3.insert('1.0', enc_str)
     test = enc_str.decode(('utf-8'))
-    print(test)
     pyperclip.copy(test)
     onClick()
-
-    # with open('encryption_key', 'wb') as file:
-    #     file.write(base64.urlsafe_b64encode(bytes(key, 'utf-8')))
-    # with open('encryption_key', 'rb') as file:
-    #     key = file.read()
-    #     print(key)
-    # f = Fernet(key)\
-    #
 
 def decrypt_text(key, enc_string):
     f = Fernet(key)
